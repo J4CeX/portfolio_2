@@ -1,0 +1,45 @@
+body{
+  font-family: Arial;
+  margin: 0;
+}
+
+/* header */
+
+header{
+  display: flex;
+  height: 60px;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-logo{
+  background-color: green;
+  display:flex;
+}
+
+/* main */
+
+.main-slider{
+  background-color: blue;
+  height: 500px;
+}
+
+.container{
+  display: flex;
+  height: 400px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.booster{
+  background-color: pink;
+  height: 200px;
+}
+
+/* footer */
+
+footer{
+  background-color: black;
+  height: 400px;
+}
