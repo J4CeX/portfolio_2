@@ -36,7 +36,7 @@ main{
 }
 
 .main-slider .welcome-image{
-  height: 850px;
+  height: 900px;
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -47,9 +47,10 @@ main{
   background-color: rgb(224, 224, 224);
   display: flex;
   height: 400px;
+  width: 1000px;
+  padding: 50px;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
   border-radius: 30px;
   z-index: 100;
   box-shadow: 0 0 3px;
@@ -59,18 +60,21 @@ main{
   background-color: rgb(224, 224, 224);
   display: flex;
   flex-direction: column;
-  height: 800px;
+  height: 700px;
+  width: 1000px;
+  padding: 50px;
   justify-content:space-around;
   align-items: center;
-  width: 90%;
   border-radius: 30px;
   z-index: 100;
   box-shadow: 0 0 3px;
 }
 
 .container-projects .text{
+  height: 50px;
   font-size: 48px;
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .container-projects .slider{
@@ -78,7 +82,9 @@ main{
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 75%;
+  height: 650px;
+  border: solid 1px black;
+  position: relative;
 }
 
 .container-projects .slider .view-buttons button{
@@ -89,38 +95,53 @@ main{
   margin-bottom: 10px;
 }
 
-.container-projects .slider .view-buttons button:active{
-  background-color: lightblue;
-}
-
-.container-projects .slider .content{
-  height: 100%;
-  width: 90%;
-  margin: 0 20px 20px 20px;
+.container-projects .scroll-left{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: -25px;
+  top: 260px;
+  border-radius: 25px;
   border: solid 1px black;
 }
 
-.buffor{
+.container-projects .scroll-right{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: -25px;
+  top: 260px;
+  border-radius: 25px;
+  border: solid 1px black;
+}
+
+.slide-image{
+  object-fit: cover;
+  height: 570px;
+  width: 100%;
+}
+
+.buffer{
   height: 150px;
   width: 100%;
   position: relative;
 }
 
-.buffor .between-containers-image{
-  height: 750px;
+.buffer .between-containers-image{
+  height: 800px;
   width: 100%;
   object-fit: cover; 
   position: absolute;
-  top: -200px;
+  top: -250px;
   z-index: 1;
 }
 
-.buffor .above-footer-image{
-  height: 350px;
+.buffer .above-footer-image{
+  height: 400px;
   width: 100%;
   object-fit: cover; 
   position: absolute;
-  top: -200px;
+  top: -250px;
   z-index: 1;
 }
 
