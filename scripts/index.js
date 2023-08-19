@@ -2,6 +2,7 @@ import {slides} from '../data/slides.js';
 
 let index = 0;
 
+welcomeImageAnimation();
 displaySlide(slides[index]);
 
 function displaySlide(slide){
@@ -35,4 +36,12 @@ function displaySlide(slide){
         }
         displaySlide(slides[index]);
     });
+}
+
+function welcomeImageAnimation(){
+    const welcomeImage = document.querySelector('.welcome-image');
+
+    setTimeout(() => {
+        welcomeImage.classList.add('welcome-image-show');
+    }, 1000);
 }

@@ -29,19 +29,36 @@ main{
   align-items: center;
 }
 
-.main-slider{
+.main-welcome{
   height: 500px;
   width: 100%;
   position: relative;
 }
 
-.main-slider .welcome-image{
+.main-welcome .welcome-image{
   height: 900px;
   width: 100%;
   object-fit: cover;
   position: absolute;
   z-index: 1;
+  opacity: 1;
 }
+
+.main-welcome .welcome-image-show{
+  opacity: 0.2;
+  transition: opacity 2s;
+}
+
+.main-welcome .welcome-text{
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 55%;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+}
+
 
 .container{
   background-color: rgb(224, 224, 224);
