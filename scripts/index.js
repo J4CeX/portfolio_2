@@ -1,52 +1,6 @@
-import {slides} from '../data/slides.js';
-
-let index = 0;
-let slideAnimation = false;
+// import {slides} from '../data/slides.js';
 
 welcomeImageAnimation();
-displaySlide(slides[index]);
-
-function displaySlide(slide){
-    const slider = document.querySelector('.slider');
-
-    slider.innerHTML = `
-        <div class="slide-image-container">
-            <img src="images/${slide.image}" class="slide-image">
-            <div class="content">${slide.text}</div>
-        </div>
-        <div class="scroll-left-animation"></div>
-        <div class="scroll-right-animation"></div>
-        <button class="scroll-left">
-            <
-        </button>
-        <button class="scroll-right">
-            >
-        </button>
-    `;
-    const scrollLeft = document.querySelector('.scroll-left');
-
-    scrollLeft.addEventListener('click', () => {
-        if(!slideAnimation){
-            index--;
-            if(index < 0){
-                index = slides.length-1;
-            }
-            sliderScrollLeft(slides[index]);
-        }
-    });
-
-    const scrollRight = document.querySelector('.scroll-right');
-
-    scrollRight.addEventListener('click', () => {
-        if(!slideAnimation){
-            index++;
-            if(index >= slides.length){
-                index = 0;
-            }
-            sliderScrollRight(slides[index]);
-        }
-    });
-}
 
 function welcomeImageAnimation(){
     const welcomeImage = document.querySelector('.welcome-image');
@@ -56,26 +10,65 @@ function welcomeImageAnimation(){
     }, 1000);
 }
 
-function sliderScrollRight(slide){
-    slideAnimation = true;
-    setTimeout(() => {
-        displaySlide(slides[index]);
-        const nextSlide = document.querySelector('.scroll-right-animation');
-        nextSlide.innerHTML = `
-            <img src="../images/${slide.image}" class="slide-image">
-        `;
-        slideAnimation = false;
-    }, 1000);
-}
+let isDragging = false;
+let startX;
+let startScrollLeft;
 
-function sliderScrollLeft(slide){
-    slideAnimation = true;
-    setTimeout(() => {
-        displaySlide(slides[index]);
-        const nextSlide = document.querySelector('.scroll-left-animation');
-        nextSlide.innerHTML = `
-            <img src="../images/${slide.image}" class="slide-image">
-        `;
-        slideAnimation = false;
-    }, 1000);
-}
+const carousel = document.querySelector(".carousel");
+const arrowLeft = document.querySelector(".scroll-left");
+const arrowRight = document.querySelector(".scroll-right");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const carouselChildrens = [...carousel.children];
+
+let cardPerView = Math.round(carousel.offsetWidth  / firstCardWidth);
+
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+});
+
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+arrowLeft.addEventListener("click", () => {
+    carousel.scrollLeft += arrowLeft.className === "scroll-left" ? -firstCardWidth : firstCardWidth;
+})
+
+arrowRight.addEventListener("click", () => {
+    carousel.scrollLeft += arrowLeft.className === "scroll-right" ? -firstCardWidth : firstCardWidth;
+})
+
+carousel.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    carousel.classList.add("dragging");
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener("mousemove", (e) => {
+    if(!isDragging){
+        return;
+    }
+    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+});
+
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    carousel.classList.remove("dragging");
+});
+
+carousel.addEventListener("scroll", () => {
+    if(carousel.scrollLeft === 0){
+        carousel.classList.remove("transition");
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+        carousel.classList.remove("no-transition");
+        carousel.classList.add("transition");
+    } else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth){
+        carousel.classList.remove("transition");
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+        carousel.classList.add("transition");
+    }
+});
