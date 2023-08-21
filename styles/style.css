@@ -8,17 +8,68 @@ body{
 
 header{
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 80px;
-  border-bottom: solid 1px black;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   z-index: 1000;
+  background-color: rgb(224, 224, 224);
+  box-shadow: 0 1px 5px;
+}
+
+.phone-button-container{
+  width: 110px;
+  height: 50px;
+}
+
+.phone-button-container button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  box-shadow: 0 0 5px;
+  transition: scale 0.5s;
+}
+
+.phone-button-container button:hover{
+  scale: 1.1;
+}
+
+.phone-button-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .header-logo{
-  display:flex;
+  margin-top: 10px;
+  height: 60px;
   font-size: 40px;
   font-weight: bold;
+  text-align: center;
+}
+
+.social-media{
+  display: flex;
+  width: 110px;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.social-media .instagram{
+  background-color: yellow;
+  width: 50px;
+  height: 100%;
+}
+
+.social-media .facebook{
+  background-color: blue;
+  width: 50px;
+  height: 100%;
 }
 
 /* main */
@@ -264,6 +315,10 @@ main{
   position: absolute;
   top: -250px;
   z-index: 1;
+}
+
+.buffer.last{
+  height: 450px;
 }
 
 /* footer */
