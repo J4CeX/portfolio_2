@@ -64,7 +64,7 @@ main{
 .container{
   background-color: rgb(224, 224, 224);
   display: grid;
-  
+  column-gap: 50px;
   text-align: center;
   height: 400px;
   width: 1000px;
@@ -82,8 +82,10 @@ main{
   grid-template-columns: 1fr 400px;
 }
 
-.about-me-container{
-  
+.about-me-container .content{
+  text-indent: 20px;
+  text-align: justify;
+  font-size: 20px;
 }
 
 /* my skills */
@@ -92,8 +94,10 @@ main{
   grid-template-columns: 400px 1fr;
 }
 
-.my-skills-container{
-
+.my-skills-container .content{
+  text-indent: 20px;
+  text-align: justify;
+  font-size: 20px;
 }
 
 /* about me & my skills images */
