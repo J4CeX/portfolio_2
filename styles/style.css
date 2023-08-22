@@ -13,36 +13,78 @@ header{
   left: 0;
   right: 0;
   height: 80px;
-  justify-content: space-around;
+  justify-content: space-around; 
   align-items: center;
   z-index: 1000;
   background-color: rgb(224, 224, 224);
   box-shadow: 0 1px 5px;
 }
 
-.phone-button-container{
-  width: 110px;
-  height: 50px;
+.phone-number{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.phone-button-container button{
-  width: 50px;
-  height: 50px;
+.phone-number .phone-img-container{
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   border: none;
   background-color: transparent;
   box-shadow: 0 0 5px;
   transition: scale 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
 }
 
-.phone-button-container button:hover{
+.phone-number .phone-img-container:hover{
   scale: 1.1;
 }
 
-.phone-button-container img{
-  width: 100%;
-  height: 100%;
+.phone-number .phone-img-container img{
+  width: 80%;
+  height: 80%;
   object-fit: contain;
+  cursor: pointer;
+}
+
+.phone-number .number{
+  display: none;
+  margin: none;
+  white-space: nowrap;
+}
+
+.phone-number .number.hidden{
+  display: inherit;
+  font-size: 24px;
+  overflow: hidden;
+  animation-name: example2;
+  animation-duration: 2s;
+  animation-direction: normal;
+  width: 0;
+}
+
+.phone-number .number.shown{
+  display: inherit;
+  font-size: 24px;
+  overflow: hidden;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-direction: normal;
+  width: 180px;
+}
+
+@keyframes example{
+  from {width: 0;}
+  to {width: 180px;}
+}
+
+@keyframes example2{
+  from {width: 180px; }
+  to {width: 0;}
 }
 
 .header-logo{
@@ -55,9 +97,9 @@ header{
 
 .social-media{
   display: flex;
-  width: 110px;
+  width: 130px;
   height: 50px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .social-media .instagram{
