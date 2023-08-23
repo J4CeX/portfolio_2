@@ -13,7 +13,6 @@ header{
   left: 0;
   right: 0;
   height: 80px;
-  justify-content: space-around; 
   align-items: center;
   z-index: 1000;
   background-color: rgb(224, 224, 224);
@@ -21,6 +20,8 @@ header{
 }
 
 .phone-number{
+  position: absolute;
+  left: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,14 +31,14 @@ header{
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  border: none;
-  background-color: transparent;
+  background-color: rgb(242, 242, 242);
   box-shadow: 0 0 5px;
   transition: scale 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 .phone-number .phone-img-container:hover{
@@ -48,7 +49,6 @@ header{
   width: 80%;
   height: 80%;
   object-fit: contain;
-  cursor: pointer;
 }
 
 .phone-number .number{
@@ -88,30 +88,55 @@ header{
 }
 
 .header-logo{
+  position: absolute;
+  left: 30%;
+  right: 30%;
   margin-top: 10px;
   height: 60px;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
+  color: rgb(242, 242, 242);
+  text-shadow: 0 0 20px black;
 }
 
 .social-media{
+  position: absolute;
+  right: 10%;
   display: flex;
   width: 130px;
   height: 50px;
   justify-content: space-around;
 }
 
-.social-media .instagram{
-  background-color: yellow;
+.social-media .instagram,
+.social-media .facebook{
   width: 50px;
-  height: 100%;
+  height: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: scale 0.5s;
+  box-shadow: 0 0 5px;
+}
+
+.social-media .instagram{
+  border-radius: 14px;
 }
 
 .social-media .facebook{
-  background-color: blue;
+  border-radius: 10px;
+}
+
+.social-media .instagram:hover,
+.social-media .facebook:hover{
+  scale: 1.1;
+}
+
+.social-media .instagram img,
+.social-media .facebook img{
   width: 50px;
-  height: 100%;
+  height: 50px;
+  object-fit: cover;
 }
 
 /* main */
@@ -145,12 +170,13 @@ main{
 
 .main-welcome .welcome-text{
   position: absolute;
-  left: 40%;
-  right: 40%;
+  left: 20%;
+  right: 20%;
   top: 55%;
   color: white;
   font-size: 36px;
   text-align: center;
+  font-style: italic;
 }
 
 

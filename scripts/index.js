@@ -1,4 +1,4 @@
- import {slides} from '../data/slides.js';
+import {slides} from '../data/slides.js';
 
 let hidden = true;
 
