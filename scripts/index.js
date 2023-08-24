@@ -40,10 +40,9 @@ function renderSlides(){
     slides.forEach((slide) => {
         slidesHTML += `
             <li class="card">
-                <div class="image"><img src="images/${slide.image}" draggable="false"></div>
-                <div class="text">
-                    ${slide.text}
-                </div>
+                <a href="${slide.link}" target="_blank"> 
+                    <div class="image"><img src="images/${slide.image}" draggable="false"></div>
+                </a>
             </li>
         `;
     });
