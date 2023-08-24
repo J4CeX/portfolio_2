@@ -41,6 +41,9 @@ function renderSlides(){
         slidesHTML += `
             <li class="card">
                 <div class="image"><img src="images/${slide.image}" draggable="false"></div>
+                <div class="text">
+                    ${slide.text}
+                </div>
             </li>
         `;
     });
