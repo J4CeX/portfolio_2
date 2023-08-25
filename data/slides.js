@@ -1,10 +1,13 @@
 export const slides = [{
     link: 'index.html',
-    image: 'example.jpg'
+    image: 'example.jpg',
+    text: 'Tu może znaleźć się twoja strona!'
 }, {
     link: 'index.html',
-    image: 'welcome_image.jpg'
+    image: 'welcome_image.jpg',
+    text: 'Tu może znaleźć się twoja strona!'
 }, {
     link: 'index.html',
-    image: 'code.jpg'
+    image: 'code.jpg',
+    text: 'Tu może znaleźć się twoja strona!'
 }];

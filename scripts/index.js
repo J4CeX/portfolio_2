@@ -42,6 +42,7 @@ function renderSlides(){
             <li class="card">
                 <a href="${slide.link}" target="_blank"> 
                     <div class="image"><img src="images/${slide.image}" draggable="false"></div>
+                    <div class="card-text">${slide.text}</div>
                 </a>
             </li>
         `;
