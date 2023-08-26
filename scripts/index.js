@@ -2,27 +2,28 @@ import {slides} from '../data/slides.js';
 
 let hidden = true;
 
-showNumber();
+// showNumber();
+scrollToTheTop();
 welcomeImageAnimation();
 renderSlides();
 slider();
 
-function showNumber(){
-    const phoneContainer = document.querySelector('.phone-img-container')
-    const number = document.querySelector('.number');
+// function showNumber(){
+//     const phoneContainer = document.querySelector('.phone-img-container')
+//     const number = document.querySelector('.number');
     
-    phoneContainer.addEventListener('click', () => {
-        if(hidden){
-            number.classList.remove('hidden');
-            number.classList.add('shown');
-            hidden = false;
-        } else{
-            number.classList.remove('shown');
-            number.classList.add('hidden');
-            hidden = true;
-        }
-    });
-}
+//     phoneContainer.addEventListener('click', () => {
+//         if(hidden){
+//             number.classList.remove('hidden');
+//             number.classList.add('shown');
+//             hidden = false;
+//         } else{
+//             number.classList.remove('shown');
+//             number.classList.add('hidden');
+//             hidden = true;
+//         }
+//     });
+// }
 
 function welcomeImageAnimation(){
     const welcomeImage = document.querySelector('.welcome-image');
@@ -113,5 +114,16 @@ function slider(){
             carousel.classList.remove("no-transition");
             carousel.classList.add("transition");
         }
+    });
+}
+
+function scrollToTheTop(){
+    const logo = document.querySelector('.header-logo');
+    logo.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behaviour: 'smooth'
+        });
     });
 }
