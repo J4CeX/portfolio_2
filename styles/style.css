@@ -33,96 +33,6 @@ header{
   justify-content: center;
 }
 
-/* .phone-number{
-  position: absolute;
-  left: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.phone-number .phone-img-container{
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background-color: rgb(242, 242, 242);
-  box-shadow: 0 0 5px;
-  transition: scale 0.5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 15px;
-  cursor: pointer;
-}
-
-.phone-number .phone-img-container:hover{
-  scale: 1.1;
-}
-
-.phone-number .phone-img-container img{
-  margin-top: 1px;
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-}
-
-.phone-number .number{
-  display: none;
-  margin: none;
-  white-space: nowrap;
-  user-select: text;
-}
-
-.phone-number .number.hidden{
-  display: inherit;
-  font-size: 24px;
-  overflow: hidden;
-  animation-name: hide;
-  animation-duration: 2s;
-  animation-direction: normal;
-  width: 0;
-}
-
-.phone-number .number.shown{
-  display: inherit;
-  font-size: 24px;
-  overflow: hidden;
-  animation-name: show;
-  animation-duration: 2s;
-  animation-direction: normal;
-  width: 180px;
-}
-
-@keyframes show{
-  from {width: 0;}
-  to {width: 180px;}
-  0%{
-    border: none;
-  }
-  1%{
-    border-right: solid 1px black
-  }
-  100%{
-    border-right: solid 1px black;
-    padding-right: 5px;
-  }
-}
-
-@keyframes hide{
-  from {width: 180px; }
-  to {width: 0;}
-  0%{
-    border-right: solid 1px black;
-    padding-right: 5px;
-  }
-  99%{
-    border-right: solid 1px black
-  }
-  100%{
-    border: none;
-  }
-} */
-
 .header-container{
   width: 1000px;
   height: 100%;
@@ -245,7 +155,117 @@ main{
   font-size: 20px;
 }
 
-/* about me & my skills images */
+/* contact */
+
+.container.contact{
+  grid-template-columns: 1fr 400px;
+  position: relative;
+}
+
+.contact-container{
+  align-self: baseline;
+  margin-top: 30px;
+}
+
+.contact-container .content{
+  text-indent: 20px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.phone-number{
+  position: absolute;
+  left: 50px;
+}
+
+.phone-number .number-request{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.phone-number .number{
+  display: none;
+  margin: none;
+  white-space: nowrap;
+  user-select: text;
+  text-align: left;
+}
+
+.phone-number .number.hidden{
+  display: inherit;
+  font-size: 20px;
+  overflow: hidden;
+  animation-name: hide;
+  animation-duration: 2s;
+  animation-direction: normal;
+  width: 0;
+}
+
+.phone-number .number.shown{
+  display: inherit;
+  font-size: 20px;
+  overflow: hidden;
+  animation-name: show;
+  animation-duration: 2s;
+  animation-direction: normal;
+  width: 155px;
+}
+
+@keyframes show{
+  from {width: 0;}
+  to {width: 155px;}
+  0%{
+    border: none;
+  }
+  1%{
+    border-right: solid 1px black
+  }
+  100%{
+    border-right: solid 1px black;
+  }
+}
+
+@keyframes hide{
+  from {width: 155px; }
+  to {width: 0;}
+  0%{
+    border-right: solid 1px black;
+  }
+  99%{
+    border-right: solid 1px black
+  }
+  100%{
+    border: none;
+  }
+}
+
+#mail,
+#msg{
+  display: block;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#mail{
+  height: 26px;
+  width: 100%;
+  font-size: 16px;
+}
+
+#msg{
+  height: 280px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.form-container{
+  text-align: left;
+  font-size: 20px;
+}
+
+/* about me & my skills images & contact*/
 
 .image-container{
   overflow: hidden;
@@ -443,16 +463,7 @@ main{
   width: 100%;
   object-fit: cover; 
   position: absolute;
-  top: -250px;
-  z-index: 1;
-}
-
-.buffer .above-footer-image{
-  height: 400px;
-  width: 100%;
-  object-fit: cover; 
-  position: absolute;
-  top: -250px;
+  top: -400px;
   z-index: 1;
 }
 
@@ -471,21 +482,19 @@ footer{
 
 .footer-container{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   width: 1000px;
   margin: auto;
 }
 
 .footer-sources a:visited,
-.footer-shorts a:visited,
-.footer-contact a:visited{
+.footer-shorts a:visited{
   color: white;
 }
 
 .footer-sources a:link,
-.footer-shorts a:link,
-.footer-contact a:link{
+.footer-shorts a:link{
   color: white;
 }
 
