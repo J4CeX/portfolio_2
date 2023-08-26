@@ -246,23 +246,39 @@ main{
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 5px;
+  width: 390px;
+  font-size: 16px;
+  border: solid 1px black;
 }
 
 #mail{
   height: 26px;
-  width: 100%;
-  font-size: 16px;
 }
 
 #msg{
-  height: 280px;
-  width: 100%;
-  font-size: 16px;
+  height: 240px;
 }
 
 .form-container{
   text-align: left;
   font-size: 20px;
+} 
+
+.send-button{
+  border-radius: 5px;
+  width: 100px;
+  height: 36px;
+  font-size: 18px;
+  background-color: rgb(30, 30, 30);
+  border: solid 1px black;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.send-button:active{
+  background-color: white;
+  color: rgb(30, 30, 30);
+  text-shadow: none;
 }
 
 /* about me & my skills images & contact*/
@@ -465,10 +481,6 @@ main{
   position: absolute;
   top: -400px;
   z-index: 1;
-}
-
-.buffer.last{
-  height: 450px;
 }
 
 /* footer */
