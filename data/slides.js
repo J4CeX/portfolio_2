@@ -1,6 +1,6 @@
 export const slides = [{
     link: 'index.html',
-    image: 'example.jpg',
+    image: 'above_footer_image.jpg',
     text: 'Tu może znaleźć się twoja strona!'
 }, {
     link: 'index.html',
