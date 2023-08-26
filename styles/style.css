@@ -181,6 +181,19 @@ main{
 .phone-number .number-request{
   font-size: 20px;
   cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(30, 30, 30);
+  border: solid 1px black;
+  color: white;
+  text-shadow: 0 0 5px black;
+  margin-bottom: 5px;
+}
+
+.phone-number .number-request:active{
+  background-color: white;
+  color: rgb(30, 30, 30);
+  text-shadow: none;
 }
 
 .phone-number .number{
@@ -273,12 +286,17 @@ main{
   border: solid 1px black;
   color: white;
   text-shadow: 0 0 5px black;
+  cursor: pointer;
 }
 
 .send-button:active{
   background-color: white;
   color: rgb(30, 30, 30);
   text-shadow: none;
+}
+
+.form-container textarea{
+  resize: none;
 }
 
 /* about me & my skills images & contact*/
