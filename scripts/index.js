@@ -1,12 +1,14 @@
 import {slides} from '../data/slides.js';
 
 let hidden = true;
+let sideMenu = false;
 
 showNumber();
 scrollToTheTop();
 welcomeImageAnimation();
 renderSlides();
 slider();
+menuButton();
 
 function showNumber(){
     const phoneContainer = document.querySelector('.number-request')
@@ -126,4 +128,36 @@ function scrollToTheTop(){
             behaviour: 'smooth'
         });
     });
+}
+
+function menuButton(){
+  const sideNavigation = document.querySelector('.side-navigation');
+  const menuButton = document.querySelector('.menu-img');
+  menuButton.addEventListener('click', () => {
+    if(sideMenu === false){
+      sideNavigation.innerHTML = `
+        <li class="nav-link">
+        <a href="#about-me-link">O mnie</a>
+        </li>
+        <li class="nav-link">
+        <a href="#my-skills-link">Moje umiejętności</a>
+        </li>
+        <li class="nav-link">
+        <a href="#projects-link">Projekty</a>
+        </li>
+        <li class="nav-link">
+        <a href="#contact-link">Kontakt</a>
+        </li>
+      `;
+      sideNavigation.classList.remove('hidden');
+      sideNavigation.classList.add('shown');
+      sideMenu = true;
+    } else{
+      sideNavigation.innerHTML = '';
+      sideMenu = false;
+      sideNavigation.classList.remove('shown')
+      sideNavigation.classList.add('hidden');
+    }
+    
+  });
 }
