@@ -198,7 +198,7 @@ main{
 
 .phone-number .number{
   display: none;
-  margin: none;
+  margin: auto;
   white-space: nowrap;
   user-select: text;
   text-align: left;
@@ -531,4 +531,75 @@ footer{
 .copyright{
   margin-top: 20px;
   text-align: center;
+}
+
+/* responsive */
+
+@media screen and (max-width: 992px) {
+  .header-container{
+    width: 700px;
+  }
+
+  .container-projects,
+  .container{
+    width: 600px;
+  }
+
+  .container.about-me,
+  .container.my-skills{
+    grid-template-columns: 1fr;
+    height: 800px;
+  }
+  .about-me-container{
+    margin-bottom: 30px;
+  }
+
+  .image-container{
+    width: 90%;
+    height: 95%;
+    margin: auto;
+  }
+
+  .container-projects .slider{
+    max-width: 700px;
+  }
+
+  .container-projects .slider .carousel{
+    grid-auto-columns: 600px;
+  }
+
+  .container-projects .slider .carousel .card .image img{
+    width: 600px;
+    height: 100%;
+  }
+
+  .container-projects .slider .carousel .card .card-text{
+    width: 100%;
+  }
+
+  .container.contact{
+    grid-template-columns: 1fr;
+    height: 700px;
+  }
+
+  .phone-number{
+    left: 10%;
+    right: 10%;
+  }
+
+  .form-container{
+    justify-self: center;
+  }
+
+  .footer-container{
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 768) {
+  
+}
+
+@media screen and (max-width: 600) {
+  
 }
