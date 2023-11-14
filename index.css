@@ -50,3 +50,14 @@ ul li a:any-link {
   text-decoration: none;
   color: #fff;
 }
+
+#content {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+#content section {
+  flex: 1;
+  
+}
