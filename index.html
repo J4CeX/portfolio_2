@@ -1,159 +1,21 @@
 <!DOCTYPE html>
-<html lang="pl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet", href="styles/style.css">
-    <title>Jacek.Dev</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacek Kozakowski</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <main>
     <header>
-      <div class="header-container">
-        <div class="header-logo">
-          Jacek.Dev
-        </div>
-        <div class="header-navigation">
-          <div class="nav-link">
-            <a href="#about-me-link">O mnie</a>
-          </div>
-          <div class="nav-link">
-            <a href="#my-skills-link">Moje umiejętności</a>
-          </div>
-          <div class="nav-link">
-            <a href="#projects-link">Projekty</a>
-          </div>
-          <div class="nav-link">
-            <a href="#contact-link">Kontakt</a>
-          </div>
-        </div>
-        <div class="header-menu">
-          <img class="menu-img" src="images/menu.png">
-          <ul class="side-navigation hidden">
-            
-          </ul>
-        </div>
-      </div>
+      <h1 id="header-title-line">Jacek Kozakowski</h1>
+      <ul>
+        <li>Strona główna</li>
+        <li><a href="https://github.com/J4CeX" target="_blank">Github</a></li>
+        <li>O mnie</li>
+      </ul>
     </header>
-
-    <main>
-
-      <div class="main-welcome">
-        <img src="images/welcome_image.jpg" class="welcome-image">
-        <div class="welcome-text">“Nic nie jest podawane na tacy – każdy zawsze trafia na jakieś przeszkody po drodze. Kiedy się pojawią, zastanów się jak je pokonać, a nie myśl o tym, że to już koniec drogi.”<br><span style="font-style: normal;">- Michale Jordan</span></div>
-      </div>
-
-      <div class="buffer" id="about-me-link"></div>
-
-      <div class="container about-me">
-        <div class="about-me-container">
-          <h1 class="headline">O mnie</h1>
-          <p class="content">
-            Jestem młodym programistą pragnącym rozwijać swoje umiejętności i wiedzę w dziedzinie IT. Uwielbiam być w ciągłym ruchu i nienawidzę zastoju. Codziennie poszukuję nowych wyzwań i problemów programistycznych, których rozwiązywanie poszerza moją wiedzę i horyzonty.
-            Dbam o jakość wykonywanych przeze mnie projektów, gdyż w mojej pracy nie uznaję półśrodków i muszę być pewny, że nie stworzyłem czegoś wybrakowanego. 
-          </p> 
-        </div>
-        <div class="image-container">
-          <img src="images/profile-picture.jpg">
-        </div>
-      </div>
-
-      <div class="buffer"  id="my-skills-link"></div>
-
-      <div class="container my-skills">
-        <div class="image-container">
-          <img src="images/code.jpg">
-        </div>
-        <div class="my-skills-container">
-          <h1 class="headline">Moje umiejętności</h1>
-          <p class="content">Specjalizuję się w językach programowania, takich jak: C++, HTML, CSS, JavaScript.</p>
-          <p class="content">Potrafię także posługiwać się narzędziami kontroli wersji kodu: git oraz github.</p>
-        </div>
-      </div>
-
-      <div class="buffer" id="projects-link"></div>
-
-      <div class="container-projects">
-        <div class="text">
-          Projekty
-        </div>
-        <div class="slider">
-          <button class="scroll-left"><</button>
-          <ul class="carousel transition">
-            
-          </ul>
-          <button class="scroll-right">></button>
-        </div>
-      </div>
-
-      <div class="buffer" id="contact-link">
-        <img src="images/above_footer_image.jpg" class="between-containers-image">
-      </div>
-
-      <div class="container contact">
-        <div class="contact-container">
-          <h1 class="headline">Kontakt</h1>
-          <p class="content">Serdecznie zapraszam do kontaktu drogą mailową lub telefoniczną. </p>
-          <div class="phone-number">
-            <button class="number-request">
-              Kliknij, aby wyświetlić numer telefonu
-            </button>
-            <div class="number">
-              Tymczasowo zablokowane.
-            </div>
-          </div>
-        </div>
-        <div class="form-container">
-          <form action="https://formsubmit.io/send/jacek_kozakowski_dev@wp.pl" method="POST">
-            <label for="mail">Twój e-mail</label>
-            <input id="mail" name="mail" type="mail" placeholder="Wpisz swój adres">
-
-            <label for="msg">Twoja wiadomość</label>
-            <textarea id="msg" name="msg" placeholder="Wpisz wiadomość"></textarea>
-
-            <input name="_redirect" type="hidden" id="name" value="https://J4CeX.github.io/Portfolio/send_mail.html">
-
-            <input class="send-button" value="Wyślij" type="submit"></button>
-          </form>
-        </div>
-      </div>
-
-      <div class="buffer"></div>
-    </main>
-    
-    <footer>
-      <div class="footer-container">
-        <div class="footer-sources">
-          <h3>Źródła</h3>
-          <p>Obrazy:
-            <br>
-            <a href="https://pixabay.com/pl/users/jamesmarkosborne-1640589/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1076536" target="_blank"> James Osborne</a> z <a href="https://pixabay.com/pl//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1076536" target="_blank"> Pixabay</a>
-            <br>
-            <a href="https://pixabay.com/pl/users/freephotocc-2275370/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1280537" target="_blank"> Free Photos</a> z <a href="https://pixabay.com/pl//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1280537" target="_blank"> Pixabay</a>
-            <br>
-            <a href="https://pixabay.com/pl/users/skitterphoto-324082/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2982270" target="_blank"> Rudy and Peter Skitterians</a> z <a href="https://pixabay.com/pl//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2982270" target="_blank"> Pixabay</a>
-          </p>
-        </div>
-        <div class="footer-shorts">
-          <h3>Skróty</h3>
-          <p>
-            <a href="#about-me-link">O mnie</a>
-          </p>
-          <p>
-            <a href="#my-skills-link">Moje umiejętności</a>
-          </p>
-          <p>
-            <a href="#projects-link">Projekty</a>
-          </p>
-          <p>
-            <a href="#contact-link">Kontakt</a>
-          </p>
-        </div>
-      </div>
-      <div class="copyright">
-        Copyright &copy; 2023 by Jacek Kozakowski | All Rights Reserved
-      </div>
-    </footer>
-
-    <script src="scripts/index.js" type="module"></script>
-  </body>
+  </main>
+</body>
 </html>
