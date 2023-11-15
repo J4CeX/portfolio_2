@@ -7,11 +7,14 @@
 :root {
   --MAIN-BGCOLOR-START: #B5179E;
   --MAIN-BGCOLOR-END: #4CC9F0;
+
+  --BOX-SHADOW: #00000067;
 }
 
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
+  user-select: none;
 }
 
 body {
@@ -25,16 +28,19 @@ body {
 
 main {
   width: 80%;
-  height: 60%;
+  height: 550px;
   background-color: hsla(0, 0%, 0%, 0.65);
   color: #fff;
   border-radius: 2rem;
   padding: 2rem;
+  max-width: 1000px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  height: 10%;
+  text-wrap: nowrap;
 }
 
 ul {
@@ -44,6 +50,7 @@ ul {
 
 ul li {
   padding: 1rem;
+  display: block;
 }
 
 ul li a:any-link {
@@ -54,10 +61,56 @@ ul li a:any-link {
 #content {
   display: flex;
   width: 100%;
+  height: calc(90% - 1rem);
   margin-top: 1rem;
 }
 
-#content section {
+.container {
   flex: 1;
-  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+#text-container p{
+  margin-top: 1rem;
+}
+
+
+
+#contact-button {
+  position: absolute;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  border-radius: 1.75rem;
+  border: none;
+  box-shadow: 0 0 3px 2px var(--BOX-SHADOW);
+  cursor: pointer;
+}
+
+figure {
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+img {
+  margin-top: 1.5rem;
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 0 0 3px 2px var(--BOX-SHADOW);
+}
+
+.off-side {
+  position: absolute;
+  left: -9999px;
 }
