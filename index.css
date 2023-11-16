@@ -51,6 +51,7 @@ ul {
 ul li {
   padding: 1rem;
   display: block;
+  font-weight: 700;
 }
 
 ul li a:any-link {
@@ -75,6 +76,7 @@ ul li a:any-link {
 
 #text-container p{
   margin-top: 1rem;
+  text-indent: 1rem;
 }
 
 
@@ -93,6 +95,13 @@ ul li a:any-link {
   border: none;
   box-shadow: 0 0 3px 2px var(--BOX-SHADOW);
   cursor: pointer;
+  background-color: #2540C7;
+  color: #fff;
+}
+
+#contact-button:hover {
+  background-color: #fff;
+  color: #2540C7;
 }
 
 figure {
