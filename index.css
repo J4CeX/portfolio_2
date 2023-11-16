@@ -74,12 +74,14 @@ ul li a:any-link {
   position: relative;
 }
 
+#text-container {
+  margin-top: 4rem;
+}
+
 #text-container p{
   margin-top: 1rem;
   text-indent: 1rem;
 }
-
-
 
 #contact-button {
   position: absolute;
@@ -99,7 +101,7 @@ ul li a:any-link {
   color: #fff;
 }
 
-#contact-button:hover {
+#contact-button:focus {
   background-color: #fff;
   color: #2540C7;
 }

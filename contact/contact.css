@@ -82,14 +82,14 @@ ul li a:any-link {
 }
 
 label {
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
   font-size: 1.25rem;
   padding: 0.25rem;
 }
 
 input {
   font-size: 1.25rem;
-  padding: 0.25em 0.5rem;
+  padding: 0.3em 1rem;
   border-radius: 1rem;
   outline: none;
   border: none;
@@ -99,13 +99,21 @@ input {
 textarea {
   height: 100%;
   font-size: 1.25rem;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 1rem;
   outline: none;
 }
 
 #submit-button {
   margin-top: 0.5rem;
+  background-color: #2540C7;
+  color: #fff;
+  cursor: pointer;
+}
+
+#submit-button:focus {
+  background-color: #fff;
+  color: #2540C7;
 }
 
 #message {
