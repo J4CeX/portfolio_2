@@ -76,6 +76,7 @@ ul li a:any-link {
 
 #text-container {
   margin-top: 4rem;
+  line-height: 1.5rem;
 }
 
 #text-container p{
