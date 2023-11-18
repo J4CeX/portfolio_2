@@ -17,7 +17,7 @@ html {
   user-select: none;
 }
 
-body {
+main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ body {
   background: linear-gradient(45deg, var(--MAIN-BGCOLOR-START), var(--MAIN-BGCOLOR-END));
 }
 
-main {
+#main {
   width: 80%;
   height: 550px;
   background-color: hsla(0, 0%, 0%, 0.65);
@@ -114,6 +114,17 @@ textarea {
 #submit-button:focus {
   background-color: #fff;
   color: #2540C7;
+}
+
+footer {
+  min-height: 100px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #message {

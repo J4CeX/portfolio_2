@@ -17,7 +17,7 @@ html {
   user-select: none;
 }
 
-body {
+main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ body {
   background: linear-gradient(45deg, var(--MAIN-BGCOLOR-START), var(--MAIN-BGCOLOR-END));
 }
 
-main {
+#main {
   width: 80%;
   height: 550px;
   background-color: hsla(0, 0%, 0%, 0.65);
@@ -120,6 +120,17 @@ img {
   object-fit: cover;
   border-radius: 2rem;
   box-shadow: 0 0 3px 2px var(--BOX-SHADOW);
+}
+
+footer {
+  min-height: 100px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .off-side {
