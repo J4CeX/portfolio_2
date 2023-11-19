@@ -117,6 +117,12 @@ textarea {
   background-color: #2540C7;
   color: #fff;
   cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0.4em 1rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 3px 2px var(--BOX-SHADOW);
 }
 
 #submit-button:focus {
