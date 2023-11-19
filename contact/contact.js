@@ -8,6 +8,6 @@ function sendEmail () {
     + "<br>E-mail: " + document.getElementById('e-mail').value 
     + "<br>Wiadomosc: " + document.getElementById('message').value
   }).then(
-    message => alert("Wiadomość została poprawnie wysłana")
+    message => alert("Wiadomość została wysłana poprawnie")
   );
 }
