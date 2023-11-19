@@ -21,7 +21,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: linear-gradient(45deg, var(--MAIN-BGCOLOR-START), var(--MAIN-BGCOLOR-END));
 }
@@ -35,6 +35,8 @@ main {
   padding: 2rem;
   max-width: 1000px;
   min-width: 586px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 header {
