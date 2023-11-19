@@ -1,7 +1,7 @@
 function sendEmail () {
   Email.send({
-    SecureToken: "b5b402b1-166b-4d15-b1de-42b4b0a4684a",
-    To : 'jacek_kozakowski_dev@wp.pl',
+    SecureToken: "ffc53151-b8ba-435d-9890-ab362dfb725e",
+    To : 'jacek.kozakowski.dev@gmail.com',
     From : document.getElementById('e-mail').value,
     Subject : "Nowa wiadomosc",
     Body : "Imie i nazwisko: " + document.getElementById('full-name').value 
