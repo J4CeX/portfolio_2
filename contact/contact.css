@@ -34,6 +34,7 @@ main {
   border-radius: 2rem;
   padding: 2rem;
   max-width: 1000px;
+  min-width: 586px;
 }
 
 header {
@@ -94,7 +95,7 @@ label {
 
 input {
   font-size: 1.25rem;
-  padding: 0.3em 1rem;
+  padding: 0.4em 1rem;
   border-radius: 1rem;
   outline: none;
   border: none;
@@ -134,4 +135,111 @@ footer {
 
 #message {
   resize: none;
+}
+
+header .menu-button {
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  height: 48px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  background-color: #fff;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+}
+
+.menu-icon::before{
+  transform: translate(-20px, -12px);
+}
+
+.menu-icon::after{
+  transform: translate(-20px, 12px);
+}
+
+:is(.menu-button:hover, .menu-button:focus-within) .menu-icon {
+  background-color: transparent;
+  transform: rotate(720deg);
+}
+
+:is(.menu-button:hover, .menu-button:focus-within) .menu-icon:before {
+  transform: translateX(-20px) rotate(45deg);
+}
+
+:is(.menu-button:hover, .menu-button:focus-within) .menu-icon:after {
+  transform: translateX(-20px) rotate(-45deg);
+}
+
+:is(.menu-button:hover, .menu-button:focus-within) .side-bar {
+  display: block;
+}
+
+.side-bar {
+  background-color: rgba(0, 0, 0, 0.767);
+  display: none;
+  transform-origin: top center;
+  animation: showMenu 0.5s ease-in-out forwards;
+}
+
+@keyframes showMenu {
+  0% {
+    right: -200px;
+  }
+
+  100% {
+    right:  0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .menu-button {
+    display: flex;
+  }
+  header #menu-list {
+    display: none;
+  }
+  .side-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.767);
+    z-index: 1000;
+  }
+  #menu-side-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #main {
+    width: 100%;
+    min-width: auto;
+    border-radius: 0;
+    box-shadow: 0 0 3px 2px var(--BOX-SHADOW);
+    padding: 1rem;
+  }
+  .img-container {
+    display: none;
+  }
+
 }
