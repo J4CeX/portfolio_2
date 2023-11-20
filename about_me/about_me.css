@@ -211,6 +211,7 @@ header .menu-button {
 @media only screen and (max-width: 600px) {
   #main {
     width: 100%;
+    height: auto;
     min-width: auto;
     border-radius: 0;
     box-shadow: 0 0 3px 2px var(--BOX-SHADOW);
@@ -222,6 +223,6 @@ header .menu-button {
     flex-direction: column;
   }
   .img-container {
-    padding: 2rem;
+    padding: 1rem;
   }
 }
