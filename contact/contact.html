@@ -41,7 +41,7 @@
 
           <section id="e-mail-input-container">
             <label for="e-mail"><i class="icon-mail-alt"></i> E-mail</label>
-            <input type="text" name="e-mail" id="e-mail" placeholder="...">
+            <input type="email" name="e-mail" id="e-mail" placeholder="...">
           </section>
 
           <section id="message-container">
@@ -58,21 +58,11 @@
     <div class="plugin-copyright" data-owner="Jacek Kozakowski"></div>
   </footer>
 
-  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
     function sendEmail() {
-      Email.send({
-        SecureToken: "e74892ff-94a8-4b72-a4c8-5bd0cef2b3e6",
-        To : 'jacek.kozakowski.dev@gmail.com',
-        From : document.getElementById('e-mail').value,
-        Subject : "Nowa wiadomosc",
-        Body : "Imie i nazwisko: " + document.getElementById('full-name').value 
-        + "<br>E-mail: " + document.getElementById('e-mail').value 
-        + "<br>Wiadomosc: " + document.getElementById('message').value
-      }).then(
-        message => alert(message)
-      );
+      
     }
-  </script> -->
+  </script>
 </body>
 </html>
