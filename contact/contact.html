@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./contact.css">
   <link rel="stylesheet" href="../fontello-11724d13/css/fontello.css">
   <script src="../copyright.min.js" type="text/javascript"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
   <main>
@@ -33,7 +34,7 @@
       </header>
       
       <article id="form-container">
-        <form onsubmit="sendEmail()">
+        <form class="form-contact" action="#">
           <section id="full-name-input-container">
             <label for="full-name"><i class="icon-user"></i> Imie i nazwisko</label>
             <input type="text" name="full-name" id="full-name" placeholder="...">
@@ -49,7 +50,7 @@
             <textarea name="message" id="message" placeholder="..."></textarea>
           </section>
 
-          <button id="submit-button" type="submit">Wyślij</button>
+          <input id="submit-button" type="submit">
         </form>
       </article>
     </article>
@@ -58,11 +59,6 @@
     <div class="plugin-copyright" data-owner="Jacek Kozakowski"></div>
   </footer>
 
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendEmail() {
-      
-    }
-  </script>
+  <script src="./contact.js"></script>
 </body>
 </html>
